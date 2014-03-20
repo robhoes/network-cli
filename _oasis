@@ -1,0 +1,29 @@
+OASISFormat: 0.2
+Name:        xcp-idl
+Version:     0.9.14
+Synopsis:    Interface definitions and common boilerplate for the xapi toolstack
+Authors:     David Scott
+License:     LGPL-2.1 with OCaml linking exception
+Plugins:     META (0.2)
+BuildTools:  ocamlbuild
+
+Library rpc
+  CompiledObject:     best
+  Path:               rpc
+  Modules:            Xcp_client
+  BuildDepends:       uri, re, cohttp, xmlm, unix, rpclib, rpclib.syntax, rpclib.xml, threads
+
+Library idl
+  CompiledObject:     best
+  Path:               idl
+#  Findlibname:        network
+#  Findlibparent:      xcp
+  Modules:            Network_interface, Network_client#, Network_stats
+  BuildDepends:       rpc, threads, rpclib, rpclib.syntax, rpclib.idl
+
+Executable cli
+  CompiledObject:     best
+  Path:               cli
+  MainIs:             network_cli.ml
+  BuildDepends:       idl, rpclib
+

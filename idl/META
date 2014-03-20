@@ -1,0 +1,13 @@
+# OASIS_START
+# DO NOT EDIT (digest: 8852db25a7d6170762b09e7bb77103e4)
+version = "0.9.14"
+description =
+"Interface definitions and common boilerplate for the xapi toolstack"
+requires = "rpc threads rpclib rpclib.syntax rpclib.idl"
+archive(byte) = "idl.cma"
+archive(byte, plugin) = "idl.cma"
+archive(native) = "idl.cmxa"
+archive(native, plugin) = "idl.cmxs"
+exists_if = "idl.cma"
+# OASIS_STOP
+

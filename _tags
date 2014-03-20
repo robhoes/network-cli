@@ -1,0 +1,65 @@
+# OASIS_START
+# DO NOT EDIT (digest: 9a64cbfe601dc4ea22fce8a649437bcb)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Library rpc
+"rpc/rpc.cmxs": use_rpc
+<rpc/*.ml{,i}>: pkg_cohttp
+<rpc/*.ml{,i}>: pkg_re
+<rpc/*.ml{,i}>: pkg_rpclib
+<rpc/*.ml{,i}>: pkg_rpclib.syntax
+<rpc/*.ml{,i}>: pkg_rpclib.xml
+<rpc/*.ml{,i}>: pkg_threads
+<rpc/*.ml{,i}>: pkg_unix
+<rpc/*.ml{,i}>: pkg_uri
+<rpc/*.ml{,i}>: pkg_xmlm
+# Library idl
+"idl/idl.cmxs": use_idl
+<idl/*.ml{,i}>: pkg_cohttp
+<idl/*.ml{,i}>: pkg_re
+<idl/*.ml{,i}>: pkg_rpclib
+<idl/*.ml{,i}>: pkg_rpclib.idl
+<idl/*.ml{,i}>: pkg_rpclib.syntax
+<idl/*.ml{,i}>: pkg_rpclib.xml
+<idl/*.ml{,i}>: pkg_threads
+<idl/*.ml{,i}>: pkg_unix
+<idl/*.ml{,i}>: pkg_uri
+<idl/*.ml{,i}>: pkg_xmlm
+<idl/*.ml{,i}>: use_rpc
+# Executable cli
+<cli/network_cli.{native,byte}>: pkg_cohttp
+<cli/network_cli.{native,byte}>: pkg_re
+<cli/network_cli.{native,byte}>: pkg_rpclib
+<cli/network_cli.{native,byte}>: pkg_rpclib.idl
+<cli/network_cli.{native,byte}>: pkg_rpclib.syntax
+<cli/network_cli.{native,byte}>: pkg_rpclib.xml
+<cli/network_cli.{native,byte}>: pkg_threads
+<cli/network_cli.{native,byte}>: pkg_unix
+<cli/network_cli.{native,byte}>: pkg_uri
+<cli/network_cli.{native,byte}>: pkg_xmlm
+<cli/network_cli.{native,byte}>: use_idl
+<cli/network_cli.{native,byte}>: use_rpc
+<cli/*.ml{,i}>: pkg_cohttp
+<cli/*.ml{,i}>: pkg_re
+<cli/*.ml{,i}>: pkg_rpclib
+<cli/*.ml{,i}>: pkg_rpclib.idl
+<cli/*.ml{,i}>: pkg_rpclib.syntax
+<cli/*.ml{,i}>: pkg_rpclib.xml
+<cli/*.ml{,i}>: pkg_threads
+<cli/*.ml{,i}>: pkg_unix
+<cli/*.ml{,i}>: pkg_uri
+<cli/*.ml{,i}>: pkg_xmlm
+<cli/*.ml{,i}>: use_idl
+<cli/*.ml{,i}>: use_rpc
+# OASIS_STOP
