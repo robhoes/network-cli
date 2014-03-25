@@ -1,8 +1,7 @@
 # OASIS_START
-# DO NOT EDIT (digest: e3e613142f6ad9b952567b9404cdf3ec)
-version = "0.9.14"
-description =
-"Interface definitions and common boilerplate for the xapi toolstack"
+# DO NOT EDIT (digest: 4a1ff23e76dd95aba93aa63e120c66da)
+version = "0.1"
+description = "A CLI for xcp-networkd"
 requires = "uri re cohttp xmlm unix rpclib rpclib.syntax rpclib.xml threads"
 archive(byte) = "rpc.cma"
 archive(byte, plugin) = "rpc.cma"

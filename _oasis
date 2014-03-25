@@ -1,7 +1,7 @@
 OASISFormat: 0.2
-Name:        xcp-idl
-Version:     0.9.14
-Synopsis:    Interface definitions and common boilerplate for the xapi toolstack
+Name:        network-cli
+Version:     0.1
+Synopsis:    A CLI for xcp-networkd
 Authors:     David Scott
 License:     LGPL-2.1 with OCaml linking exception
 Plugins:     META (0.2)
