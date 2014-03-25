@@ -25,5 +25,5 @@ Executable cli
   CompiledObject:     best
   Path:               cli
   MainIs:             network_cli.ml
-  BuildDepends:       idl, rpclib
+  BuildDepends:       idl, rpclib, cmdliner
 

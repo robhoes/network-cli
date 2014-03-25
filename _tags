@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 9a64cbfe601dc4ea22fce8a649437bcb)
+# DO NOT EDIT (digest: b2287d5c71fa53791735489696367979)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -38,6 +38,7 @@
 <idl/*.ml{,i}>: pkg_xmlm
 <idl/*.ml{,i}>: use_rpc
 # Executable cli
+<cli/network_cli.{native,byte}>: pkg_cmdliner
 <cli/network_cli.{native,byte}>: pkg_cohttp
 <cli/network_cli.{native,byte}>: pkg_re
 <cli/network_cli.{native,byte}>: pkg_rpclib
@@ -50,6 +51,7 @@
 <cli/network_cli.{native,byte}>: pkg_xmlm
 <cli/network_cli.{native,byte}>: use_idl
 <cli/network_cli.{native,byte}>: use_rpc
+<cli/*.ml{,i}>: pkg_cmdliner
 <cli/*.ml{,i}>: pkg_cohttp
 <cli/*.ml{,i}>: pkg_re
 <cli/*.ml{,i}>: pkg_rpclib
